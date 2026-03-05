@@ -190,6 +190,16 @@
       color: var(--amber);
       line-height: 1;
     }
+    .logo-meaning {
+      font-family: var(--body);
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--mid);
+      line-height: 1;
+      margin-top: 3px;
+      font-style: italic;
+    }
 
     .nav-btn {
       font-size: 0.94rem;
@@ -262,6 +272,24 @@
     }
 
     .hero h1 { max-width: 720px; margin-bottom: 22px; }
+    .hero-name-meaning {
+      font-size: 0.9rem;
+      color: var(--amber);
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-name-meaning::after {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--amber);
+      opacity: 0.5;
+    }
     .hero h1 em { font-style: italic; color: var(--amber); }
 
     .hero-sub {
@@ -1147,6 +1175,7 @@
       <div class="logo">
         <span class="logo-brand">Sthira</span>
         <span class="logo-sub">Nutrition</span>
+        <span class="logo-meaning">स्थिर &middot; Steady. Strong. Rooted.</span>
       </div>
       <a href="#survey" class="btn btn-amber nav-btn">Help Us Build This &rarr;</a>
     </div>
@@ -1161,6 +1190,7 @@
       <!-- Left: text -->
       <div class="hero-text">
         <div class="hero-pill">Coming Soon to India</div>
+        <p class="hero-name-meaning">स्थिर (sthira) — Sanskrit for steady, grounded, and strong</p>
         <h1>
           Age with <em>strength.</em><br>
           Live on your own terms.
