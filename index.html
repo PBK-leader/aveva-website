@@ -1214,8 +1214,8 @@
         <div class="hero-pill">Built for Indians Everywhere</div>
         <p class="hero-name-meaning">स्थिर (sthira), Sanskrit for steady, grounded, and strong</p>
         <h1>
-          Age with <em>strength.</em><br>
-          Live on your own terms.
+          Stay strong.<br>
+          <em>Stay independent.</em>
         </h1>
         <p class="hero-sub">
           After 50, the body loses muscle faster than it can rebuild. This age-related muscle loss,
@@ -1291,11 +1291,6 @@
     <div class="fade">
       <div class="section-tag">The Problem</div>
       <h2>Most protein supplements were not designed for life after 50.</h2>
-      <p class="problem-lead">
-        Gym-focused protein powders are designed for young athletes, not for older adults.
-        They are heavy, artificial, and ignore the specific nutritional needs of the Indian body at 50 and above.
-        Sthira Nutrition is being built differently, from the ground up for this stage of life.
-      </p>
     </div>
     <div class="problem-cards fade fade-stagger">
       <div class="prob-card">
@@ -1305,8 +1300,8 @@
       </div>
       <div class="prob-card">
         <div class="prob-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13 C6 18 9.5 21 13 21 C16.5 21 20 18 20 13"/><line x1="5" y1="13" x2="21" y2="13"/><path d="M9 9 C9 7.5 10 6.5 10 5"/><path d="M13 8 C13 6.5 14 5.5 14 4"/><path d="M17 9 C17 7.5 18 6.5 18 5"/></svg></div>
-        <h3>Wrong Flavours, Wrong Memories</h3>
-        <p>Chocolate whey and vanilla shakes were made for a different generation. Older Indian adults grew up on haldi doodh, elaichi chai, and rose lassi, flavours that feel familiar and comforting, not foreign.</p>
+        <h3>Built Around Indian Taste Memories</h3>
+        <p>Chocolate whey and vanilla shakes were made for a different generation. Older Indian adults deserve flavours that feel familiar and comforting — Kesar Elaichi, Gulab, Haldi, Natural Vanilla, and Mango — not foreign gym supplements.</p>
       </div>
       <div class="prob-card">
         <div class="prob-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="13" y1="8" x2="13" y2="22"/><line x1="9" y1="22" x2="17" y2="22"/><line x1="4" y1="9" x2="22" y2="9"/><circle cx="13" cy="8" r="1.5"/><line x1="5" y1="9" x2="4" y2="14"/><line x1="9" y1="9" x2="10" y2="14"/><path d="M4 14 Q7 17.5 10 14"/><line x1="17" y1="9" x2="16" y2="14"/><line x1="21" y1="9" x2="22" y2="14"/><path d="M16 14 Q19 17.5 22 14"/></svg></div>
@@ -2293,23 +2288,114 @@
   /* --------------------------------------------------
      FORM SUBMISSION (Formspree)
   -------------------------------------------------- */
+  var labelMaps = {
+    for_whom: {
+      parents: 'My parents (or in-laws)',
+      myself: 'For myself',
+      spouse: 'My spouse / partner',
+      other: 'Another family member'
+    },
+    age_range: {
+      'under-50': 'Under 50',
+      '50-60': '50 to 60 years',
+      '60-70': '60 to 70 years',
+      '70+': '70 years and above'
+    },
+    protein_awareness: {
+      '1': '1 - Rarely, it never comes up',
+      '2': '2 - Occasionally, when I read about health',
+      '3': '3 - A few times a week',
+      '4': '4 - Most days, it is on my mind',
+      '5': '5 - Every day, it is a conscious priority'
+    },
+    perception: {
+      gym: 'A gym supplement, not for older adults',
+      clinical: 'Something clinical, like a hospital drink',
+      unsure: 'Not sure - I do not know enough about it',
+      positive: 'A practical daily health habit'
+    },
+    protein_tried: {
+      never: 'No - I have never tried one',
+      stopped: 'I tried one but stopped using it',
+      occasionally: 'I use one occasionally',
+      regularly: 'Yes - I take one regularly'
+    },
+    barrier_never: {
+      need: 'Did not think I needed it at my age',
+      safety: 'Worried about artificial ingredients or side effects',
+      design: 'Never found one designed for older adults',
+      knowledge: 'Not sure how much to take or how to use it',
+      price: 'Price seemed too high'
+    },
+    barrier_stopped: {
+      taste: 'Taste or texture was not right',
+      no_effect: 'Did not notice a real difference',
+      habit: 'Hard to make it a daily habit',
+      digestion: 'Had digestive discomfort or bloating',
+      price: 'Too expensive to continue'
+    },
+    current_brand: {
+      ensure: 'Ensure (Abbott)',
+      protinex: 'Protinex (Danone)',
+      horlicks: 'Horlicks Protein+',
+      muscleblaze: 'MuscleBlaze',
+      oziva: 'Oziva',
+      other: 'Other brand',
+      none: 'None specifically'
+    },
+    format_preference: {
+      powder: 'Powder I mix myself - more control over dosage',
+      drink: 'Ready-to-drink - convenient, no preparation needed',
+      no_pref: 'No preference - happy with either'
+    },
+    health_concern: {
+      muscle: 'Muscle weakness and difficulty with daily tasks',
+      bones: 'Bone strength and fracture risk',
+      energy: 'Low energy and chronic fatigue',
+      appetite: 'Poor appetite and not eating enough'
+    },
+    lactose: {
+      yes: 'Yes - lactose intolerant',
+      sensitive: 'Possibly - a little sensitive to dairy',
+      no: 'No - dairy is fine',
+      unsure: 'Not sure'
+    },
+    price_range: {
+      'under-1000': 'Under Rs 1,000 / month',
+      '1000-1500': 'Rs 1,000 to Rs 1,500 / month',
+      '1500-2000': 'Rs 1,500 to Rs 2,000 / month',
+      'above-2000': 'Rs 2,000+ if the quality is right'
+    },
+    buy_channel: {
+      amazon: 'Amazon or Flipkart',
+      direct: "Brand's own website (direct)",
+      pharmacy: 'Local pharmacy or medical store',
+      qcommerce: 'BigBasket, Blinkit, or Zepto'
+    }
+  };
+
+  function getLabel(field, val) {
+    if (labelMaps[field] && labelMaps[field][val]) return labelMaps[field][val];
+    return val;
+  }
+
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Copy survey answers to hidden fields
-    document.getElementById('h_for_whom').value           = answers['for_whom']            || '';
-    document.getElementById('h_age_range').value          = answers['age_range']           || '';
-    document.getElementById('h_protein_awareness').value  = answers['protein_awareness']   || '';
-    document.getElementById('h_perception').value         = answers['perception']          || '';
-    document.getElementById('h_protein_tried').value      = answers['protein_tried']       || '';
-    document.getElementById('h_barrier_never').value      = answers['barrier_never']       || '';
-    document.getElementById('h_barrier_stopped').value    = answers['barrier_stopped']     || '';
-    document.getElementById('h_current_brand').value      = answers['current_brand']       || '';
-    document.getElementById('h_format_preference').value  = answers['format_preference']   || '';
-    document.getElementById('h_health_concern').value     = answers['health_concern']      || '';
-    document.getElementById('h_lactose').value            = answers['lactose']             || '';
-    document.getElementById('h_price_range').value        = answers['price_range']         || '';
-    document.getElementById('h_buy_channel').value        = answers['buy_channel']         || '';
+    // Copy survey answers to hidden fields (translated to readable labels)
+    document.getElementById('h_for_whom').value           = getLabel('for_whom',          answers['for_whom']           || '');
+    document.getElementById('h_age_range').value          = getLabel('age_range',         answers['age_range']          || '');
+    document.getElementById('h_protein_awareness').value  = getLabel('protein_awareness', answers['protein_awareness']  || '');
+    document.getElementById('h_perception').value         = getLabel('perception',         answers['perception']         || '');
+    document.getElementById('h_protein_tried').value      = getLabel('protein_tried',     answers['protein_tried']      || '');
+    document.getElementById('h_barrier_never').value      = getLabel('barrier_never',     answers['barrier_never']      || '');
+    document.getElementById('h_barrier_stopped').value    = getLabel('barrier_stopped',   answers['barrier_stopped']    || '');
+    document.getElementById('h_current_brand').value      = getLabel('current_brand',     answers['current_brand']      || '');
+    document.getElementById('h_format_preference').value  = getLabel('format_preference', answers['format_preference']  || '');
+    document.getElementById('h_health_concern').value     = getLabel('health_concern',    answers['health_concern']     || '');
+    document.getElementById('h_lactose').value            = getLabel('lactose',           answers['lactose']            || '');
+    document.getElementById('h_price_range').value        = getLabel('price_range',       answers['price_range']        || '');
+    document.getElementById('h_buy_channel').value        = getLabel('buy_channel',       answers['buy_channel']        || '');
 
     // GA4 event tracking
     if (typeof gtag !== 'undefined') {
