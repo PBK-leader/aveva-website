@@ -384,8 +384,11 @@
 
     .problem-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
+    }
+    @media (max-width: 860px) {
+      .problem-cards { grid-template-columns: repeat(2, 1fr); }
     }
 
     .prob-card {
@@ -401,21 +404,15 @@
       box-shadow: var(--shadow-lg);
     }
 
-    .prob-icon {
-      width: 52px;
-      height: 52px;
-      background: var(--green-light);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 22px;
-      color: var(--green);
-      flex-shrink: 0;
+    .prob-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 14px;
     }
-    .prob-icon svg { width: 26px; height: 26px; }
-    .prob-card h3 { font-size: 1.12rem; margin-bottom: 10px; color: var(--dark); }
-    .prob-card p { font-size: 0.93rem; color: var(--mid); line-height: 1.65; }
+    .prob-card p { font-size: 1.05rem; color: var(--dark); line-height: 1.55; font-weight: 500; margin: 0; }
 
     /* =============================================
        PRODUCT SECTION
@@ -1294,19 +1291,20 @@
     </div>
     <div class="problem-cards fade fade-stagger">
       <div class="prob-card">
-        <div class="prob-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="9" width="4" height="8" rx="1"/><rect x="5" y="11" width="3" height="4" rx="0.5"/><line x1="8" y1="13" x2="18" y2="13"/><rect x="18" y="11" width="3" height="4" rx="0.5"/><rect x="21" y="9" width="4" height="8" rx="1"/></svg></div>
-        <h3>Not Designed With You in Mind</h3>
-        <p>Existing products are optimised for muscle gain and bodybuilding. Older Indians need protein for mobility, bone health, and everyday vitality, not for bulking up.</p>
+        <div class="prob-label">Flavours</div>
+        <p>No one made a protein for the Indian palate.</p>
       </div>
       <div class="prob-card">
-        <div class="prob-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13 C6 18 9.5 21 13 21 C16.5 21 20 18 20 13"/><line x1="5" y1="13" x2="21" y2="13"/><path d="M9 9 C9 7.5 10 6.5 10 5"/><path d="M13 8 C13 6.5 14 5.5 14 4"/><path d="M17 9 C17 7.5 18 6.5 18 5"/></svg></div>
-        <h3>Built Around Indian Taste Memories</h3>
-        <p>Every protein powder on the market was built for a 25-year-old. Older Indian adults deserve flavours that feel familiar and comforting: Kesar Elaichi, Gulab, Haldi, Natural Vanilla, and Mango. Not foreign gym supplements.</p>
+        <div class="prob-label">Ingredients</div>
+        <p>Most proteins are optimised for muscle gain, not healthy ageing.</p>
       </div>
       <div class="prob-card">
-        <div class="prob-icon"><svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="13" y1="8" x2="13" y2="22"/><line x1="9" y1="22" x2="17" y2="22"/><line x1="4" y1="9" x2="22" y2="9"/><circle cx="13" cy="8" r="1.5"/><line x1="5" y1="9" x2="4" y2="14"/><line x1="9" y1="9" x2="10" y2="14"/><path d="M4 14 Q7 17.5 10 14"/><line x1="17" y1="9" x2="16" y2="14"/><line x1="21" y1="9" x2="22" y2="14"/><path d="M16 14 Q19 17.5 22 14"/></svg></div>
-        <h3>Too Clinical or Too Casual</h3>
-        <p>Available options are either intimidating medical supplements or aggressive gym products. There is no warm, trustworthy option built for Indian families and the way they think about health.</p>
+        <div class="prob-label">Clean Label</div>
+        <p>Older adults deserve to know exactly what they are consuming.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-label">Segment</div>
+        <p>No protein supplement is made specifically for Indians over 50.</p>
       </div>
     </div>
   </div>
