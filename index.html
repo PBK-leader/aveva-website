@@ -1101,16 +1101,36 @@
        RESPONSIVE — MOBILE
     ============================================= */
     @media (max-width: 600px) {
-      .hero { padding: 56px 0 72px; }
+      /* Nav */
+      .logo-brand { font-size: 1.9rem; }
+      .logo-sub { font-size: 0.68rem; }
+      .logo-meaning { display: none; }
+      .nav-btn { padding: 9px 14px; font-size: 0.78rem; }
+
+      /* Buttons */
+      .btn { font-size: 0.9rem; padding: 13px 22px; }
+
+      /* Hero */
+      .hero { padding: 40px 0 56px; }
+      .hero-img-wrap img { aspect-ratio: 4/3; object-fit: cover; }
+      .hero-name-meaning { font-size: 0.82rem; }
+      .hero-ctas { flex-direction: column; align-items: stretch; }
+      .hero-ctas .btn { text-align: center; }
+
+      /* Sections */
       .stats-grid { grid-template-columns: 1fr; gap: 36px; }
       .stat-divider { border-left: none; border-top: 1px solid rgba(24,56,8,0.10); padding-top: 36px; }
       .sarco-copy { margin-bottom: 40px; }
-      .form-card { padding: 30px 20px; }
-      .hero-ctas { flex-direction: column; align-items: stretch; }
-      .hero-ctas .btn { text-align: center; }
       .why-cards { grid-template-columns: 1fr; }
       .problem-cards { grid-template-columns: 1fr; }
       .stories-grid { grid-template-columns: 1fr; }
+
+      /* Survey */
+      .form-card { padding: 24px 16px; }
+      .opt { padding: 11px 14px; font-size: 0.88rem; gap: 10px; }
+      .act-pill { padding: 8px 14px; font-size: 0.85rem; }
+
+      /* Can */
       .can-body { min-height: 160px; padding: 14px 6px 12px; }
       .can-brand { font-size: 1.05rem; }
       .can-badge { width: 28px; height: 28px; font-size: 0.48rem; top: 8px; right: 7px; }
@@ -1160,7 +1180,9 @@
     .food-bar { height: 100%; background: var(--amber); border-radius: 2px; transition: width 0.6s ease 0.1s; }
     .food-pct { font-size: 0.7rem; color: var(--mid); }
     @media (max-width: 640px) {
-      .calc-card { padding: 32px 20px; }
+      .calc-section { padding: 64px 0; }
+      .calc-card { padding: 24px 16px; }
+      .calc-lead { font-size: 0.95rem; margin-bottom: 32px; }
       .result-breakdown { grid-template-columns: 1fr 1fr; }
       .food-grid { grid-template-columns: 1fr; }
     }
