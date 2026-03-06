@@ -521,24 +521,10 @@
     ============================================= */
     .why {
       padding: 100px 0;
-      background: var(--green);
-      color: var(--white);
-      position: relative;
-      overflow: hidden;
+      background: var(--cream-dark);
     }
 
-    .why::before {
-      content: '';
-      position: absolute;
-      top: -120px; right: -120px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(160,120,48,0.12) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .why .section-tag { color: var(--gold); }
-    .why h2 { color: var(--white); margin-bottom: 56px; max-width: 560px; }
+    .why h2 { margin-bottom: 56px; max-width: 560px; }
 
     .why-cards {
       display: grid;
@@ -547,33 +533,33 @@
     }
 
     .why-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.09);
+      background: var(--white);
+      border: 1px solid rgba(24,56,8,0.07);
       border-radius: var(--radius);
       padding: 36px 30px;
+      box-shadow: var(--shadow-md);
       transition: all 0.25s ease;
     }
     .why-card:hover {
-      background: rgba(255,255,255,0.10);
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+      box-shadow: var(--shadow-lg);
     }
 
     .why-icon {
       width: 52px;
       height: 52px;
-      background: rgba(255,255,255,0.10);
+      background: var(--green-light);
       border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
-      color: var(--gold);
+      color: var(--green);
       flex-shrink: 0;
     }
     .why-icon svg { width: 26px; height: 26px; }
-    .why-card h3 { font-size: 1.2rem; font-weight: 600; color: var(--gold); margin-bottom: 12px; font-family: var(--body); }
-    .why-card p { font-size: 0.96rem; color: rgba(255,255,255,0.70); line-height: 1.70; }
+    .why-card h3 { font-size: 1.2rem; font-weight: 600; color: var(--amber); margin-bottom: 12px; font-family: var(--body); }
+    .why-card p { font-size: 0.96rem; color: var(--mid); line-height: 1.70; }
 
     /* =============================================
        SURVEY / LEAD CAPTURE SECTION
