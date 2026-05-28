@@ -327,27 +327,31 @@
     ============================================= */
     .trust-bar {
       background: var(--green);
-      padding: 14px 0;
+      padding: 11px 0;
       border-bottom: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
     }
     .trust-bar-inner {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
     .trust-item {
       display: flex;
       align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.82);
-      font-size: 0.82rem;
+      gap: 7px;
+      color: rgba(255,255,255,0.80);
+      font-size: 0.78rem;
       font-weight: 500;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.03em;
       white-space: nowrap;
+      padding: 0 22px;
     }
-    .trust-icon { color: var(--amber); font-size: 0.9rem; font-weight: 700; }
+    .trust-item + .trust-item {
+      border-left: 1px solid rgba(255,255,255,0.18);
+    }
+    .trust-icon { color: var(--amber); font-size: 0.78rem; font-weight: 700; }
 
     .sarco-section {
       background: var(--cream-dark);
@@ -1264,9 +1268,8 @@
   <div class="container">
     <div class="trust-bar-inner">
       <div class="trust-item"><span class="trust-icon">✓</span> 70+ families on the waitlist</div>
-      <div class="trust-item"><span class="trust-icon">✓</span> Indian flavours: Kesar Elaichi, Gulab, Haldi and more</div>
+      <div class="trust-item"><span class="trust-icon">✓</span> Kesar Elaichi · Gulab · Haldi · Natural Vanilla</div>
       <div class="trust-item"><span class="trust-icon">✓</span> No fillers. No artificial additives.</div>
-      <div class="trust-item"><span class="trust-icon">✓</span> Built for healthy aging</div>
     </div>
   </div>
 </div>
