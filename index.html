@@ -2468,8 +2468,8 @@
       errorEl.style.display = 'none';
 
       var baseRates = { sedentary: 1.0, light: 1.2, moderate: 1.4, active: 1.6 };
-      // Research supports higher protein needs from age 50+; bonus increases each decade
-      var ageBonus = age < 50 ? 0 : age < 60 ? 0.1 : age < 70 ? 0.2 : 0.3;
+      // Linear increase: +0.01 g/kg per year above 40 (so age 60 = +0.2, age 70 = +0.3)
+      var ageBonus = Math.max(0, (age - 40) * 0.01);
       var rate = baseRates[selectedActivity] + ageBonus;
       var grams = Math.round(weight * rate);
       var perMeal = Math.round(grams / 3);
