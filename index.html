@@ -382,9 +382,22 @@
       margin-bottom: 52px;
     }
 
+    .prob-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 40px 0 52px;
+      text-align: center;
+    }
+    .prob-stat {
+      padding: 28px 20px;
+      background: var(--cream-dark);
+      border-radius: var(--radius);
+    }
+
     .problem-cards {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
@@ -1057,7 +1070,8 @@
     @media (max-width: 860px) {
       .hero-2col { grid-template-columns: 1fr; gap: 36px; }
       .product-grid { grid-template-columns: 1fr; gap: 44px; }
-      .problem-cards { grid-template-columns: repeat(2, 1fr); }
+      .problem-cards { grid-template-columns: repeat(3, 1fr); }
+      .prob-stats { grid-template-columns: 1fr 1fr; }
       .stories-grid { grid-template-columns: 1fr 1fr; }
       .story-card-tall { aspect-ratio: 1/1; }
       .flavor-grid { grid-template-columns: 1fr 1fr; }
@@ -1218,32 +1232,26 @@
   </div>
 </section>
 
-<!-- ===================== WHY PROTEIN MATTERS ===================== -->
-<section class="sarco-section">
-  <div class="container">
-
-    <div class="sarco-copy fade">
-      <div class="section-tag">Why Protein Matters</div>
-      <h2>Your body needs more protein than you think. Most Indian meals quietly fall short.</h2>
-      <p>
-        And as you get older, your body becomes less efficient at using protein. The gap between what you need and what you get quietly widens.
-      </p>
-      <p>
-        Sthira is built for healthy aging. For staying strong, active, and independent through the years ahead.
-      </p>
-    </div>
-
-  </div>
-</section>
-
 <!-- ===================== PROBLEM ===================== -->
 <section class="problem">
   <div class="container">
     <div class="fade">
       <div class="section-tag">The Problem</div>
-      <h2>Every protein brand was built for someone else.</h2>
-      <p class="problem-lead">For the gym. For Gen Z. For millennials chasing aesthetics. Not one was built for healthy aging.</p>
+      <h2>Your body needs more protein than you think. Most Indian meals quietly fall short.</h2>
+      <p class="problem-lead">And as you get older, the gap widens. Every protein brand was built for the gym, for Gen Z, for millennials chasing aesthetics. Not one was built for healthy aging.</p>
     </div>
+
+    <div class="prob-stats fade">
+      <div class="prob-stat">
+        <span class="stat-num">73%</span>
+        <div class="stat-desc">of Indians don't meet<br>their daily protein needs</div>
+      </div>
+      <div class="prob-stat">
+        <span class="stat-num">71%</span>
+        <div class="stat-desc">of Indians aged 30 to 55<br>suffer from poor muscle health</div>
+      </div>
+    </div>
+
     <div class="problem-cards fade fade-stagger">
       <div class="prob-card">
         <div class="prob-label">Flavours</div>
@@ -1256,10 +1264,6 @@
       <div class="prob-card">
         <div class="prob-label">Clean Label</div>
         <p>Full of fillers and additives. Not what older adults should consume.</p>
-      </div>
-      <div class="prob-card">
-        <div class="prob-label">Segment</div>
-        <p>No protein supplement has been built specifically for healthy aging.</p>
       </div>
     </div>
   </div>
